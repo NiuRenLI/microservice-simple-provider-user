@@ -1,0 +1,35 @@
+server:
+  port: 8000
+spring:
+  # 用户微服务（服务提供者）
+  application:
+    name: user
+  jpa:
+    generate-ddl: false
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: 725934
+    url: jdbc:mysql://127.0.0.1/learn?characterEncoding=utf-8&useSSL=false
+logging:
+  level:
+    root: info
+    org.hibernate: info
+    org.hibernate.type.descriptor.sql.BasicBinder: trace
+    org.hibernate.type.descriptor.sql.BasicExtractor: trace
+info:
+  app:
+    name: @project.artifactId@
+    encoding: @project.build.sourceEncoding@
+    java:
+      source: @java.version@
+      target: @java.version@
+
+
+
+
+
+
